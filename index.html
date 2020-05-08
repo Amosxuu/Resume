@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Resume</title>
@@ -18,43 +19,51 @@
         <ul>
             <li><a href="#" class="active">主頁</a></li>
             <li><a href="#">關於</a></li>
-            <li><a href="#">技能</a></li>
-            <li><a href="#">作品</a></li>
+            <li><a href="#skill">技能</a></li>
+            <li><a href="#works">作品</a></li>
         </ul>
         <span class="menu-icon"></span>
     </header>
     <section class="banner">
 
     </section>
-    <section class="container">
-        <div class="content">
+    <section class="container" id="works">
+        <h2  class="sub-title">個人作品</h2>
+        <div class="works-content">
             <div class="banner-text">
-                <div class="active">
-                    <h2>EAT Healthy<br>Stay Healthy</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ducimus maxime ipsum culpa, beatae
-                        quibusdam facilis quaerat dignissimos tempora expedita ullam laudantium eaque quod cumque eos
-                        deleniti unde id assumenda.</p>
-                    <a href="#">Read More</a>
-                </div>
-                <div>
-                    <h2>Eat Your<br>Veggies</h2>
-                    <p>
-                        quibusdam facilis quaerat dignissimos tempora expedita ullam laudantium eaque quod cumque eos
-                        deleniti unde id assumenda.</p>
-                    <a href="#">Read More</a>
-                </div>
-                <div>
-                    <h2>Good Food<br>Good Foood</h2>
-                    <p>
-                        facilis quaerat dignissimos tempora expedita ullam laudantium eaque quod cumque eos
-                        deleniti unde id assumenda.</p>
-                    <a href="#">Read More</a>
-                </div>
+                <h2>可拖曳<span>記事本</span><br><sp>Trello App</h2>
+                <p>參考了Trello的線上管理App，在此使用了Vue.js框架撰寫，利用VueCLI 3 搭建 並且使用Vuex
+                    、Vue Router 管理資料與路由路徑。主要利用 <span>HTML Drag and Drop API</span> 實現卡片、任務拖曳效果(限PC端)
+                    操作起來更直覺、也更方便，並可以更換主題顏色。
+                </p>
+                <a href="https://zxceve266.github.io/home-made-trello-demo/" target="_blank">作品連結Demo</a>
             </div>
-            <div class="banner-img" id="slideShow">
-                <img src="img/a.jpg" alt="" class="active">
-                <img src="img/b.jpg" alt="">
-                <img src="img/c.jpg" alt="">
+            <div class="works-img" id="slideShow">
+                <img src="img/Trello.png" alt="">
+            </div>
+        </div>
+        <div class="works-content">
+            <div class="banner-text">
+                <h2><span>口罩</span>地圖<br>Mask Map</h2>
+                <p>因應2020年來的疫情爆發，造成全台灣口罩供不應求，利用這次事件來製作應用介面，來幫助需要的人。使用Vue.js框架撰寫，使用Axios串接
+                    <span>健保特約機構口罩剩餘數量明細清單</span> API。在地圖方面使用leaflet.js + OpenStreetMap製作
+                希望大家都可度過這次疫情</p>
+                <a href="https://zxceve266.github.io/mask-map-taiwan/." target="_blank">作品連結Demo</a>
+            </div>
+            <div class="works-img" id="slideShow">
+                <img src="img/maskMap.png" alt="">
+            </div>
+        </div>
+        <div class="works-content">
+            <div class="banner-text">
+                <h2>JS<span>小遊戲</span><br>A Game Using JavaScript</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ducimus maxime ipsum culpa, beatae
+                    quibusdam facilis quaerat dignissimos tempora expedita ullam laudantium eaque quod cumque eos
+                    deleniti unde id assumenda.</p>
+                <a href="https://zxceve266.github.io/RPGgame-javascript/" target="_blank">作品連結Demo</a>
+            </div>
+            <div class="works-img" id="slideShow">
+                <img src="img/JSGame.png" alt="">
             </div>
         </div>
         <div class="icons">
@@ -63,10 +72,10 @@
                 <li><a href="#"><img src="icon/twitter.png" alt=""></a></li>
                 <li><a href="#"><img src="icon/instagram.png" alt=""></a></li>
             </ul>
-            <ul class="controls">
+            <!-- <ul class="controls">
                 <li class="prev"><a href=""><img src="icon/left.png" alt=""></a></li>
                 <li class="next"><a href=""><img src="icon/right.png" alt=""></a></li>
-            </ul>
+            </ul> -->
         </div>
     </section>
 
