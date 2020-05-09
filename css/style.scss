@@ -5,12 +5,16 @@
     font-family: Poppins;
 }
 
-span{
+span {
     color: #78ff00;
+    text-shadow: 2px 2px 0px #333;
+}
+
+.small {
     text-shadow: 1px 1px 0px #333;
 }
 
-body{
+body {
     position: relative;
     font-family: 'Noto Sans TC', sans-serif;
 }
@@ -24,7 +28,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#333;
+    background-color: #333;
     z-index: 99;
     // padding: 30px 0;
 
@@ -57,7 +61,7 @@ header {
                 color: #fff;
                 font-size: 18px;
                 z-index: 2;
-                
+
 
                 &:before {
                     content: '';
@@ -80,16 +84,68 @@ header {
     }
 }
 
-.banner{
+.banner {
     margin-top: 60px;
     width: 100%;
     height: 100vh;
-    background: url('../img/banner.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+
+    .banner-img{
+        width: 100%;
+        height: 100%;
+        background: url('../img/banner.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .self-info {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+
+        .personal {
+            width: 250px;
+            height: 250px;
+            box-shadow: 0 0 50px 40px #fff;
+            border-radius: 50%;
+            background: url('../img/person.jpg') no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 40px;
+            text-shadow: 3px 3px #333;
+
+        }
+
+        p {
+            font-size: 40px;
+            margin-top: 20px;
+            text-shadow: 2px 2px #333;
+        }
+    }
+}
+.about{
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    margin-top: -1px;
 }
 
-.sub-title{
+.sub-title {
     width: 200px;
     height: 50px;
     padding: 5px;
@@ -104,6 +160,7 @@ header {
     position: relative;
     padding: 100px 100px 0 100px;
     min-height: 100vh;
+
     &::before {
         content: '';
         position: absolute;
@@ -124,6 +181,7 @@ header {
     align-items: center;
     margin: 50px 0 70px 0;
     position: relative;
+
     &::after {
         content: 'Trello';
         position: absolute;
@@ -198,11 +256,11 @@ header {
             height: 100%;
             object-fit: contain;
             transition: 0.5s;
-            
+
         }
     }
 
-    
+
 
 }
 
@@ -268,44 +326,58 @@ header {
         padding: 0;
         height: 60px;
         justify-content: center;
-        .logo{
+
+        .logo {
             margin-left: 50px;
             text-align: center;
             font-size: 25px;
         }
+
         ul {
-            display: none;
-            position: fixed;
             top: 0;
             left: 0;
+            padding: 100px 0;
+            position: fixed;
+            background-color: #333;
             width: 100%;
             height: 100vh;
-            background: #fff;
-            z-index: 10;
-            padding: 100px 0;
+            flex-direction: column;
+            clip-path: circle(100px at 100% -10%);
+            -ms-clip-path: circle(100px at 100% -10%);
+            -webkit-clip-path: circle(100px at 100% -10%);
+            transition: all 1s ease-out;
+
+            // &.active-ul{
+            //     clip-path: circle(1300px at 100% -10%);
+            //     -webkit-clip-path:circle(1300px at 100% -10%);
+            // }
+
             li {
                 padding: 20px;
                 text-align: center;
 
                 a {
-                    color: #333 !important;
+                    color: #fff !important;
                     font-size: 40px;
-
                     &:hover::before,
                     &.active::before {
                         width: 100%;
                     }
                 }
+                
             }
         }
 
         &.active ul {
-            display: initial;
+            clip-path: circle(1300px at 100% -10%);
+            -ms-clip-path:circle(1300px at 100% -10%);
+            -webkit-clip-path:circle(1300px at 100% -10%);
         }
-        &.active .menu-icon{
+
+        &.active .menu-icon {
             background-image: url('../icon/multiplication.png');
             background-size: cover;
-            filter: invert(0);
+            filter: invert(1);
             cursor: pointer;
         }
 
@@ -350,12 +422,31 @@ header {
         height: 30px;
         z-index: 30;
 
-        
+
     }
 }
 
-@media (max-width:767px){
-    .container{
+@media (max-width:767px) {
+    .container {
         padding: 80px 30px;
+    }
+
+    .banner {
+        .self-info {
+            .personal {
+                width: 200px;
+                height: 200px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 30px;
+
+                line-height: 40px;
+            }
+        }
     }
 }
