@@ -107,8 +107,9 @@ header ul li a:hover::before, header ul li a.active::before {
   background: url("../img/banner.jpg") no-repeat;
   background-size: cover;
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
+  background-attachment: fixed;
 }
 
 .banner .self-info {

@@ -96,11 +96,12 @@ header {
         height: 100vh;
         background: url('../img/banner.jpg') no-repeat;
         background-size: cover;
-        // background-position: center;
         position: absolute;
         top: 0;
         left: 0;
-        transition: all 1s ease;
+        // transition: all 0.2s ;
+        background-attachment: fixed;
+    }
 
     .self-info {
         width: 100%;
