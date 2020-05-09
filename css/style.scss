@@ -99,16 +99,14 @@ header {
         position: absolute;
         top: 0;
         left: 0;
-        // transition: all 0.2s ;
-        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        // transition: all 0.01s ;
+        // background-attachment: fixed;
     }
 
     .self-info {
         width: 100%;
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
         align-items: center;
