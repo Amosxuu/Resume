@@ -115,6 +115,7 @@ header ul li a:hover::before, header ul li a.active::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-attachment: fixed;
 }
 
 .banner .self-info {
@@ -155,10 +156,57 @@ header ul li a:hover::before, header ul li a.active::before {
   text-shadow: 2px 2px #333;
 }
 
+.container {
+  position: relative;
+  padding: 80px 100px 0 100px;
+  min-height: 100vh;
+}
+
 .about {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   margin-top: -1px;
+}
+
+.about-content {
+  width: 100%;
+  height: 100vh;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-content .personal-info {
+  max-width: 40%;
+  text-align: center;
+}
+
+.about-content .personal-info img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-content .personal-info p {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.about-content .personal-content {
+  max-width: 60%;
+}
+
+.about-content .personal-content p {
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .sub-title {
@@ -172,17 +220,15 @@ header ul li a:hover::before, header ul li a.active::before {
   background-color: #333;
 }
 
-.container {
+.works {
   position: relative;
-  padding: 100px 100px 0 100px;
-  min-height: 100vh;
 }
 
-.container::before {
+.works::before {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100px;
   width: 350px;
   height: 100%;
   background-color: #333;
@@ -214,6 +260,14 @@ header ul li a:hover::before, header ul li a.active::before {
   z-index: -2;
 }
 
+.works-content:nth-child(3)::after {
+  content: 'Mask';
+}
+
+.works-content:nth-child(4)::after {
+  content: 'Game';
+}
+
 .works-content .banner-text {
   position: relative;
   max-width: 500px;
@@ -243,6 +297,7 @@ header ul li a:hover::before, header ul li a.active::before {
   font-weight: 900;
   padding: 15px;
   letter-spacing: 2px;
+  cursor: pointer;
   color: #333;
 }
 
@@ -344,10 +399,7 @@ header ul li a:hover::before, header ul li a.active::before {
 
 @media (max-width: 992px) {
   .container {
-    padding: 100px 30px;
-  }
-  .container::before {
-    display: none;
+    padding: 100px 15px;
   }
   header {
     padding: 0;
@@ -402,12 +454,44 @@ header ul li a:hover::before, header ul li a.active::before {
             filter: invert(1);
     cursor: pointer;
   }
+  .about-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-content .personal-info {
+    max-width: 100%;
+  }
+  .about-content .personal-info img {
+    width: 250px;
+    height: 250px;
+  }
+  .about-content .personal-content {
+    max-width: 100%;
+    padding-top: 20px;
+  }
+  .about-content .personal-content p {
+    font-size: 18px;
+  }
+  .works::before {
+    display: none;
+  }
   .works-content {
     margin-top: 0px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    border: 1px solid #333;
+    padding: 40px;
+  }
+  .works-content::after {
+    bottom: 20px;
+    left: 100%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    font-size: 15vw;
   }
   .works-content .banner-text {
     max-width: 100%;
@@ -444,7 +528,7 @@ header ul li a:hover::before, header ul li a.active::before {
 
 @media (max-width: 767px) {
   .container {
-    padding: 80px 30px;
+    padding: 80px 15px;
   }
   .banner .self-info .personal {
     width: 200px;
@@ -456,6 +540,25 @@ header ul li a:hover::before, header ul li a.active::before {
   .banner .self-info p {
     font-size: 30px;
     line-height: 40px;
+  }
+  .about-content {
+    height: 90%;
+  }
+  .works-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .about {
+    height: 130vh;
+  }
+  .about-content {
+    height: 90%;
+  }
+  .about-content .personal-info img {
+    width: 200px;
+    height: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */
