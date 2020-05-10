@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +12,15 @@
 
 .small {
   text-shadow: 1px 1px 0px #333;
+}
+
+.big {
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 2px 2px #333;
+  color: #78ff00;
 }
 
 body {
@@ -43,9 +53,9 @@ header .logo {
   text-decoration: none;
   font-size: 30px;
   margin-left: 10%;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 header .logo span {
@@ -58,13 +68,14 @@ header ul {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
 header ul li {
-  margin: 0 20px;
   line-height: 18px;
 }
 
@@ -72,7 +83,7 @@ header ul li a {
   position: relative;
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
   z-index: 2;
 }
 
@@ -158,13 +169,13 @@ header ul li a:hover::before, header ul li a.active::before {
 
 .container {
   position: relative;
-  padding: 80px 100px 0 100px;
+  padding: 50px 100px 0 100px;
   min-height: 100vh;
 }
 
 .about {
   width: 100%;
-  height: 100vh;
+  height: auto;
   margin-top: -1px;
 }
 
@@ -192,8 +203,8 @@ header ul li a:hover::before, header ul li a.active::before {
   content: 'About';
   position: absolute;
   width: 100%;
-  top: 50%;
-  left: 20%;
+  top: 30%;
+  left: 15%;
   text-align: center;
   font-weight: 700;
   font-size: 15vw;
@@ -212,6 +223,7 @@ header ul li a:hover::before, header ul li a.active::before {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .about-content .personal-info p {
@@ -221,6 +233,7 @@ header ul li a:hover::before, header ul li a.active::before {
 
 .about-content .personal-content {
   max-width: 60%;
+  position: relative;
 }
 
 .about-content .personal-content p {
@@ -229,10 +242,54 @@ header ul li a:hover::before, header ul li a.active::before {
 }
 
 .about-content .personal-content p:nth-child(1) {
-  text-align: center;
-  font-size: 25px;
-  line-height: 40px;
+  font-size: 40px;
+  line-height: 50px;
   margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.about-content .personal-content p:nth-child(2) {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.05em solid;
+  letter-spacing: 11px;
+  width: 21ch;
+  position: relative;
+  left: 20%;
+  font-size: 40px;
+  line-height: 50px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  -webkit-animation: typing 4s steps(10) infinite, caret 1s steps(1) infinite;
+          animation: typing 4s steps(10) infinite, caret 1s steps(1) infinite;
+}
+
+@-webkit-keyframes typing {
+  /*從0開始*/
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  /*從0開始*/
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes caret {
+  50% {
+    border-right-color: transparent;
+  }
+  /*閃爍效果*/
+}
+
+@keyframes caret {
+  50% {
+    border-right-color: transparent;
+  }
+  /*閃爍效果*/
 }
 
 .sub-title {
@@ -302,6 +359,7 @@ header ul li a:hover::before, header ul li a.active::before {
 
 .skill-content .skill-card span {
   display: block;
+  font-size: 20px;
 }
 
 .works {
@@ -509,6 +567,9 @@ header ul li a:hover::before, header ul li a.active::before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     clip-path: circle(100px at 100% -10%);
     -ms-clip-path: circle(100px at 100% -10%);
     -webkit-clip-path: circle(100px at 100% -10%);
@@ -570,6 +631,14 @@ header ul li a:hover::before, header ul li a.active::before {
   }
   .about-content .personal-content p {
     font-size: 18px;
+  }
+  .about-content .personal-content p:nth-child(1) {
+    text-align: center;
+  }
+  .about-content .personal-content p:nth-child(2) {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .skill {
     width: 100%;
@@ -680,6 +749,9 @@ header ul li a:hover::before, header ul li a.active::before {
 }
 
 @media (max-width: 767px) {
+  .big {
+    font-size: 30px;
+  }
   .container {
     padding: 80px 15px;
   }
@@ -762,6 +834,14 @@ header ul li a:hover::before, header ul li a.active::before {
   }
   .about-content .personal-content p {
     line-height: 30px;
+  }
+  .about-content .personal-content p:nth-child(1) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .about-content .personal-content p:nth-child(2) {
+    font-size: 32px;
+    letter-spacing: 9px;
   }
 }
 /*# sourceMappingURL=style.css.map */
