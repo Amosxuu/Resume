@@ -4,7 +4,7 @@
   font-family: Poppins;
 }
 
-span {
+.green {
   color: #78ff00;
   text-shadow: 2px 2px 0px #333;
 }
@@ -164,22 +164,41 @@ header ul li a:hover::before, header ul li a.active::before {
 
 .about {
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   margin-top: -1px;
 }
 
 .about-content {
   width: 100%;
-  height: 100vh;
+  height: auto;
   margin-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content::before {
+  content: 'About';
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 20%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15vw;
+  z-index: -1;
+  opacity: 0.1;
 }
 
 .about-content .personal-info {
@@ -206,7 +225,14 @@ header ul li a:hover::before, header ul li a.active::before {
 
 .about-content .personal-content p {
   font-size: 20px;
-  line-height: 30px;
+  line-height: 40px;
+}
+
+.about-content .personal-content p:nth-child(1) {
+  text-align: center;
+  font-size: 25px;
+  line-height: 40px;
+  margin-bottom: 10px;
 }
 
 .sub-title {
@@ -218,6 +244,64 @@ header ul li a:hover::before, header ul li a.active::before {
   color: #fff;
   font-size: 40px;
   background-color: #333;
+}
+
+.skill {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 20px;
+}
+
+.skill-content {
+  width: 100%;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.skill-content .skill-card {
+  width: 30%;
+  text-align: center;
+  border: 1px solid #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.skill-content .skill-card .face1 i {
+  font-size: 100px;
+}
+
+.skill-content .skill-card .face1 h2 {
+  font-size: 40px;
+}
+
+.skill-content .skill-card ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skill-content .skill-card ul i {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.skill-content .skill-card ul li {
+  margin-bottom: 10px;
+}
+
+.skill-content .skill-card span {
+  display: block;
 }
 
 .works {
@@ -428,8 +512,8 @@ header ul li a:hover::before, header ul li a.active::before {
     clip-path: circle(100px at 100% -10%);
     -ms-clip-path: circle(100px at 100% -10%);
     -webkit-clip-path: circle(100px at 100% -10%);
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
   }
   header ul li {
     padding: 20px;
@@ -454,11 +538,24 @@ header ul li a:hover::before, header ul li a.active::before {
             filter: invert(1);
     cursor: pointer;
   }
+  .about {
+    height: auto;
+  }
   .about-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about-content::before {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 200px;
   }
   .about-content .personal-info {
     max-width: 100%;
@@ -474,11 +571,67 @@ header ul li a:hover::before, header ul li a.active::before {
   .about-content .personal-content p {
     font-size: 18px;
   }
+  .skill {
+    width: 100%;
+    height: auto;
+  }
+  .skill-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skill-content .skill-card {
+    width: 100%;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skill-content .skill-card .face1 i {
+    font-size: 80px;
+  }
+  .skill-content .skill-card .face1 h2 {
+    font-size: 30px;
+  }
+  .skill-content .skill-card ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .skill-content .skill-card ul i {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .skill-content .skill-card ul li {
+    margin-bottom: 5px;
+  }
+  .skill-content .skill-card span {
+    display: inline-block;
+  }
   .works::before {
     display: none;
   }
   .works-content {
-    margin-top: 0px;
+    margin-top: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -542,23 +695,73 @@ header ul li a:hover::before, header ul li a.active::before {
     line-height: 40px;
   }
   .about-content {
-    height: 90%;
+    height: 100%;
+    border: 1px solid #333;
+  }
+  .about-content::before {
+    display: none;
+  }
+  .skill {
+    margin-top: 20px;
+  }
+  .skill-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skill-content .skill-card {
+    width: 100%;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skill-content .skill-card .face1 i {
+    font-size: 80px;
+  }
+  .skill-content .skill-card .face1 h2 {
+    font-size: 30px;
+  }
+  .skill-content .skill-card ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .works-content {
     padding: 20px;
   }
 }
 
-@media (max-width: 375px) {
-  .about {
-    height: 130vh;
-  }
+@media (max-width: 414px) {
   .about-content {
-    height: 90%;
+    height: auto;
   }
   .about-content .personal-info img {
     width: 200px;
     height: 200px;
+  }
+  .about-content .personal-content p {
+    line-height: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

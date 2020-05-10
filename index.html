@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/226cea2938.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Resume</title>
@@ -15,7 +16,7 @@
 
 <body>
     <header id="navbar">
-        <a href="#" class="logo">徐智宏<span>Steve</span></a>
+        <a href="#" class="logo">徐智宏<span class="green">Steve</span></a>
         <ul>
             <li><a href="#" class="active">主頁</a></li>
             <li><a href="#about">關於</a></li>
@@ -34,33 +35,116 @@
         </div>
     </section>
     <section class="container">
-        <section class="about" id="about">
-            <h2 class="sub-title">關於我</h2>
+        <section class="about" >
+            <h2 class="sub-title" id="about">關於我</h2>
             <div class="about-content">
                 <div class="personal-info">
-                    <img src="/img/person2.png" alt="">
+                    <img src="./img/person2.png" alt="">
                     <h3>來自宜蘭的小孩</h3>
                     <p>1997年出生 喜歡挑戰新的事物</p>
                     <p>大學:國立勤益科技大學 企管系</p>
                     <p>高中:國立宜蘭高商 資料處理科</p>
                 </div>
                 <div class="personal-content">
-                    <p>嗨! 我是智宏 英文是Steve 很高興認識你/妳!
-                        我畢業於國立勤益科技大學企業管理系，最早接觸網頁是從高中開始
-                        因為高中是讀資處科，當時是使用DreamWeaver來撰寫網頁，覺得十分的有趣，但是當時並無深究，而最近因為智慧型手機的興起，發現瀏覽器畫面在PC及移動端的差異，因硬體的進步讓瀏覽器可以實現許多強大的功能，在那時才發現之前所學的知識在前端領域簡直是冰山一角，自己也以此深深著迷，想要跟上時代的浪潮、運用所學去解決問題，幫助更多需要幫助的人，因此我想要成為前端工程師!
+                    <p>嗨! 我是智宏 英文是Steve<br>很高興認識你/妳!</p>
+                        <p>我畢業於國立勤益科技大學企業管理系，最早接觸網頁是從高中開始
+                        因為高中是讀資處科，當時是使用DreamWeaver來撰寫網頁，覺得十分的有趣，但是當時並無深究<br>而最近因為智慧型手機的興起，發現瀏覽器畫面在PC及移動端的差異，因硬體的進步讓瀏覽器可以實現許多強大的功能，在那時才發現之前所學的知識在前端領域簡直是冰山一角，自己也以此深深著迷，我想要跟上時代的浪潮、運用所學去解決問題，幫助更多需要幫助的人，因此我想要成為前端工程師!
                     </p>
                 </div>
+            </div>
+        </section>
+        <section class="skill" id="skill">
+            <h2 class="sub-title">主要技能</h2>
+            <div class="skill-content">
+                <div class="skill-card">
+                    <div class="face1">
+                        <i class="fas fa-code" 
+                        style="color:red"></i>
+                        <h2>HTML & CSS</h2>
+                    </div>
+                    <ul class="face2">
+                        <li>
+                            <i class="fab fa-html5" style="color:#e54d26""></i>
+                            <span>熟悉 HTML5 語義化使用</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-css3-alt" style="color:#0b74b8"></i>
+                            <span>熟悉CSS3 樣式設計</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-bootstrap" style="color:#563d7c"></i>
+                            <span>熟悉 CSS Bootstrap Fremeworks </span>
+                        </li>
+                        <li>
+                            <i class="fab fa-sass" style="color:#cc6699"></i>
+                            <span>熟悉 CSS 預處理器 SCSS </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt" style="color:#ffa502"></i>
+                            <span>熟悉 RWD 響應式網頁設計</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="face1">
+                        <i class="fab fa-js" style="color:#ffd93a"></i>
+                        <h2>JS & 框架</h2>
+                    </div>
+                    <ul class="face2">
+                        <li>
+                            <i class="fab fa-vuejs" style="color:#39b982"></i>
+                            <span>能使用Vue.js框架進行開發</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-vuejs" style="color:#39b982"></i>
+                            <span>搭配 VueX、Vue router 開發專案</span>
+                        </li>
+                        <li>
+                            <i class="far fa-file-code" style="color:#fff200"></i>
+                            <span>了解 JavaScript ES6 語法特性</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-broadcast-tower" style="color:#4b4b4b"></i>
+                            <span>了解 Ajax 操作 使用Axios</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-link" style="color:#ff3838"></i>
+                            <span>介接 Restful API 的經驗</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="face1">
+                        <i class="far fa-object-group" style="color:#ffcccc"></i>
+                        <h2>其他技能</h2>
+                    </div>
+                    <ul class="fece2">
+                        <li>
+                            <i class="fab fa-git-alt" style="color:#f0502f"></i>
+                            <span>使用 git 作為版本管理工具</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-tools" style="color:#0078d7"></i>
+                            <span>使用VS Code 作為開發工具</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe-americas" style="color:#589af1"></i>
+                            <span>TOEIC 810 可閱讀英文文件、查詢API</span>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
         </section>
         <section class="works" id="works">
             <h2 class="sub-title" id="works">個人作品</h2>
             <div class="works-content">
                 <div class="banner-text">
-                    <h2>可拖曳<span>記事本</span><br>
+                    <h2>可拖曳<span class="green">記事本</span><br>
                         <sp>Trello App
                     </h2>
                     <p>參考了Trello的線上管理App，在此使用了Vue.js框架撰寫，利用VueCLI 3 搭建 並且使用Vuex
-                        、Vue Router 管理資料與路由路徑。主要利用 <span class="small">HTML Drag and Drop API</span> 實現卡片、任務拖曳效果(限PC端)
+                        、Vue Router 管理資料與路由路徑。主要利用 <span class="green small">HTML Drag and Drop API</span> 實現卡片、任務拖曳效果(限PC端)
                         操作起來更直覺、也更方便，並可以更換主題顏色。
                     </p>
                     <a href="https://zxceve266.github.io/home-made-trello-demo/" target="_blank">作品連結Demo</a>
@@ -71,9 +155,9 @@
             </div>
             <div class="works-content">
                 <div class="banner-text">
-                    <h2><span>口罩</span>地圖<br>Mask Map</h2>
+                    <h2><span class="green">口罩</span>地圖<br>Mask Map</h2>
                     <p>因應2020年來的疫情爆發，造成全台灣口罩供不應求，利用這次事件來製作應用介面來幫助需要的人。使用Vue.js框架撰寫，使用Axios串接
-                        <span class="small">健保特約機構口罩剩餘數量明細清單API</span>。在地圖方面使用leaflet.js + OpenStreetMap製作希望大家都可度過這次疫情
+                        <span class="green small">健保特約機構口罩剩餘數量明細清單API</span>。在地圖方面使用leaflet.js + OpenStreetMap製作希望大家都可度過這次疫情
                     </p>
                     <a href="https://zxceve266.github.io/mask-map-taiwan/." target="_blank">作品連結Demo</a>
                 </div>
@@ -83,7 +167,7 @@
             </div>
             <div class="works-content">
                 <div class="banner-text">
-                    <h2>JS<span>小遊戲</span><br>A Game Using JavaScript</h2>
+                    <h2>JS<span class="green">小遊戲</span><br>A Game Using JavaScript</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ducimus maxime ipsum culpa, beatae
                         quibusdam facilis quaerat dignissimos tempora expedita ullam laudantium eaque quod cumque eos
                         deleniti unde id assumenda.</p>
