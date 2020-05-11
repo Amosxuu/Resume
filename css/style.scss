@@ -496,9 +496,6 @@ header {
     display: none;
 }
 
-
-
-
 @media (max-width: 992px) {
     .container {
         padding: 30px 15px 0px 15px;
@@ -530,15 +527,6 @@ header {
             flex-direction: column;
             justify-content: flex-start;
             transition: all 0.5s ease-out;
-            // clip-path: circle(100px at 100% -10%);
-            // -ms-clip-path: circle(100px at 100% -10%);
-            // -webkit-clip-path: circle(100px at 100% -10%);
-
-            // &.active-ul{
-            //     clip-path: circle(1300px at 100% -10%);
-            //     -webkit-clip-path:circle(1300px at 100% -10%);
-            // }
-
             li {
                 padding: 20px;
                 text-align: center;
@@ -559,9 +547,6 @@ header {
         &.active ul {
             opacity: 1;
             width: 100%;
-            // clip-path: circle(1300px at 100% -10%);
-            // -ms-clip-path: circle(1300px at 100% -10%);
-            // -webkit-clip-path: circle(1300px at 100% -10%);
         }
 
         &.active .menu-icon {
