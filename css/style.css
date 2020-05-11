@@ -567,12 +567,13 @@ header ul li a:hover::before, header ul li a.active::before {
     font-size: 25px;
   }
   header ul {
+    opacity: 0;
     top: 0;
-    left: 0;
+    right: 0;
     padding: 100px 0;
     position: fixed;
     background-color: #333;
-    width: 100%;
+    width: 0%;
     height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -581,9 +582,6 @@ header ul li a:hover::before, header ul li a.active::before {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    clip-path: circle(100px at 100% -10%);
-    -ms-clip-path: circle(100px at 100% -10%);
-    -webkit-clip-path: circle(100px at 100% -10%);
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
   }
@@ -599,9 +597,8 @@ header ul li a:hover::before, header ul li a.active::before {
     width: 100%;
   }
   header.active ul {
-    clip-path: circle(1300px at 100% -10%);
-    -ms-clip-path: circle(1300px at 100% -10%);
-    -webkit-clip-path: circle(1300px at 100% -10%);
+    opacity: 1;
+    width: 100%;
   }
   header.active .menu-icon {
     background-image: url("../icon/multiplication.png");
