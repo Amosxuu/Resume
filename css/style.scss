@@ -31,6 +31,21 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+.up-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 80px;
+    color: #333;
+    z-index: 99;
+    cursor: pointer;
+    &:active{
+        transform: scale(0.9);
+    }
+}
+
 header {
     position: fixed;
     top: 0;
@@ -50,7 +65,7 @@ header {
         text-decoration: none;
         font-size: 30px;
         margin-left: 10%;
-        flex: 1;
+        flex: 2;
 
         span {
             margin-left: 10px;
@@ -202,6 +217,7 @@ header {
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
+            
         }
 
         p {
@@ -235,11 +251,11 @@ header {
                 // transform: translateX(-50%);
                 // text-align: center;
                 font-size: 40px;
-                line-height: 50px;
+                line-height: 40px;
                 margin-bottom: 10px;
                 font-weight: 700;
-                animation:typing 4s steps(10) infinite,
-                caret 1s steps(1) infinite;
+                animation:typing 5s steps(10) infinite,
+                caret 0.5s steps(1) infinite;
             }
         }
     }
@@ -262,10 +278,12 @@ header {
 
 
 .sub-title {
-    width: 200px;
+    width: 250px;
     height: 50px;
     padding: 5px;
+    padding-top: 10px;
     line-height: 40px;
+    border-radius: 20px;
     text-align: center;
     color: #fff;
     font-size: 40px;
@@ -274,7 +292,7 @@ header {
 
 .skill {
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin-bottom: 20px;
 }
 
@@ -289,17 +307,25 @@ header {
         text-align: center;
         border: 1px solid #333;
         box-sizing: border-box;
-        border-radius: 20px;
-        padding: 20px;
+        // border-radius: 20px;
+        
 
         .face1 {
             i {
-                font-size: 100px;
+                font-size: 80px;
             }
 
             h2 {
-                font-size: 40px;
+                font-size: 30px;
+                letter-spacing: 2px;
             }
+            border-bottom: 1px solid #333;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        .face2 {
+            padding: 20px;
         }
 
         ul {
@@ -421,7 +447,7 @@ header {
         width: 60%;
         height: 440px;
         background: #000;
-
+        cursor: pointer;
         img {
             position: absolute;
             top: 0;
@@ -433,63 +459,52 @@ header {
 
         }
     }
-
-
-
 }
 
-.icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
 
-    .sci,
-    .controls {
+
+.contact{
+    width: 100%;
+    height: 30vh;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    text-align: center;
+
+    .contact-content{
+        height: 100%;
         display: flex;
-        position: relative;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
-    .sci li {
-        list-style: none;
-        margin-right: 30px;
-
-        img {
-            display: inline-block;
-            max-height: 24px;
-            transition: 0.5s ease-in-out;
-        }
-
-        &:hover img {
-            transform: translateY(-20px);
-        }
+    h1{
+        font-size: 35px;
     }
-
-    .controls li {
-        list-style: none;
-        padding: 20px;
-        filter: invert(1);
-        transition: 0.3s ease-in-out;
-
-        img {
-            display: inline-block;
-            max-height: 30px;
-
-        }
-
-        &:hover {
-            opacity: 0.5;
-        }
+    
+    p{
+        font-size: 25px;
     }
+    h2{
+        font-size: 20px;
+    }
+    
 }
+
 
 .menu-icon {
     display: none;
 }
 
+
+
+
 @media (max-width: 992px) {
     .container {
-        padding: 100px 15px;
+        padding: 30px 15px 0px 15px;
+    }
+    .sub-title{
+        text-align: center;
     }
 
     header {
@@ -582,7 +597,7 @@ header {
         .personal-content {
             max-width: 100%;
             padding-top: 20px;
-
+            text-align: center;
             p {
                 font-size: 18px;
                 &:nth-child(1){
@@ -609,7 +624,6 @@ header {
 
         .skill-card {
             width: 100%;
-            padding: 10px;
             display: flex;
             margin-bottom: 20px;
             justify-content: center;
@@ -681,13 +695,7 @@ header {
         }
     }
 
-    .icons {
-        margin-top: 40px;
-
-        .controls li {
-            filter: invert(0);
-        }
-    }
+    
 
     .menu-icon {
         display: initial;
@@ -704,14 +712,23 @@ header {
     }
 }
 
+
+
 @media (max-width:767px) {
 
     .big{
         font-size: 30px;
     }
 
-    .container {
-        padding: 80px 15px;
+    .up-btn{
+        font-size: 70px;
+    }
+
+    // .container {
+    //     padding: 30px 15px 0px 15px;
+    // }
+    .sub-title{
+        margin: 0 auto;
     }
 
     .banner {
@@ -754,25 +771,30 @@ header {
 
         .skill-card {
             width: 100%;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
+            display: block;
             margin-bottom: 20px;
-            justify-content: center;
-            align-items: center;
 
             .face1 {
+                // width: 100%;
                 i {
-                    font-size: 80px;
+                    font-size: 60px;
                 }
-
                 h2 {
                     font-size: 30px;
                 }
             }
-
+            .face2{
+                padding: 10px;
+              
+            }
             ul {
                 flex-direction: column;
+                align-items: center;
+                text-align: center;
+                i {
+                    font-size: 20px;
+
+                }
             }
         }
     }
@@ -781,11 +803,28 @@ header {
         padding: 20px;
     }
 
+    .contact{
+        height: 40vh;
+        h1{
+            font-size: 30px;
+        }
+        
+        p{
+            font-size: 20px;
+        }
+        h2{
+            font-size: 16px;
+        }
+        
+    }
 
 }
 
 @media (max-width:414px) {
-
+    .sub-title{
+        width: 200px;
+        font-size: 30px;
+    }
     .about-content {
         height: auto;
 
@@ -805,8 +844,9 @@ header {
                     line-height: 45px;
                 }
                 &:nth-child(2){
-                    font-size: 32px;
-                    letter-spacing: 9px;
+                    font-size: 28px;
+                    line-height: 32px;
+                    letter-spacing: 7px;
                 }
             }
         }

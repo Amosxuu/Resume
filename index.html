@@ -15,16 +15,18 @@
 </head>
 
 <body>
+    <i class="fas fa-chevron-circle-up up-btn"></i>
     <header id="navbar">
         <a href="#" class="logo">徐智宏<span class="green">Steve</span></a>
         <ul>
-            <li><a href="#" class="active">主頁</a></li>
+            <li><a href="#navbar" class="active">主頁</a></li>
             <li><a href="#about">關於</a></li>
             <li><a href="#skill">技能</a></li>
             <li><a href="#works">作品</a></li>
             <li><a href="#contact">聯絡</a></li>
         </ul>
         <span class="menu-icon"></span>
+        <span class="down"></span>
     </header>
     <section class="banner">
         <div class="banner-img">
@@ -37,7 +39,7 @@
     </section>
     <section class="container">
         <section class="about" >
-            <h2 class="sub-title" id="about">關於我</h2>
+            <h2 class="sub-title" id="about"><i class="far fa-address-card"></i> 自我介紹</h2>
             <div class="about-content">
                 <div class="personal-info">
                     <img src="./img/person2.png" alt="">
@@ -49,7 +51,7 @@
                 </div>
                 <div class="personal-content">
                     <p class="title">嗨 ! 我 是 <span class="green">智 宏</span>
-                    <p>很高興認識<span class="green">你 /妳!</span></p>
+                    <p>很高興認識你 /妳!</p>
                         <p>我畢業於國立勤益科技大學企業管理系，最早接觸前端是從高中開始
                         因為高中是讀資處科，因而接觸到這領域，當時是使用DreamWeaver來撰寫網頁，覺得十分的有趣，但是當時並無深入研究。<br>直到最近因為智慧型手機的興起，並發現瀏覽器畫面在PC及移動端的差異、硬體技術的進步讓瀏覽器可以實現許多強大的功能，一個全新的世界展現在我面前，是我從未接觸過的，才發現之前所學的知識在前端領域簡直是冰山一角!，自己也以此深深著迷，從此踏進了前端的世界!!!<br>之後開始利用課餘時間自行摸索、自學，因為課業的緣故一直到畢業才開始有系統的學習。我想要跟上時代的浪潮、挑戰新的目標、持續精進自己，並運用所學去解決問題，幫助更多需要幫助的人，因此我立志成為!
                         <br>
@@ -60,7 +62,7 @@
             </div>
         </section>
         <section class="skill" id="skill">
-            <h2 class="sub-title">主要技能</h2>
+            <h2 class="sub-title"><i class="fas fa-cog"></i> 主要技能</h2>
             <div class="skill-content">
                 <div class="skill-card">
                     <div class="face1">
@@ -124,7 +126,7 @@
                         <i class="far fa-object-group" style="color:#ffcccc"></i>
                         <h2>其他技能</h2>
                     </div>
-                    <ul class="fece2">
+                    <ul class="face2">
                         <li>
                             <i class="fab fa-git-alt" style="color:#f0502f"></i>
                             <span>使用 git 作為版本管理工具</span>
@@ -143,7 +145,7 @@
             </div>
         </section>
         <section class="works" id="works">
-            <h2 class="sub-title" id="works">個人作品</h2>
+            <h2 class="sub-title" id="works"><i class="fas fa-desktop"></i> 個人作品</h2>
             <div class="works-content">
                 <div class="banner-text">
                     <h2>可拖曳<span class="green">記事本</span><br>
@@ -183,22 +185,21 @@
                     <img src="img/JSGame.png" alt="">
                 </div>
             </div>
-            <div class="icons">
-                <ul class="sci">
-                    <li><a href="#"><img src="icon/facebook-logo.png" alt=""></a></li>
-                    <li><a href="#"><img src="icon/twitter.png" alt=""></a></li>
-                    <li><a href="#"><img src="icon/instagram.png" alt=""></a></li>
-                </ul>
-                <!-- <ul class="controls">
-                    <li class="prev"><a href=""><img src="icon/left.png" alt=""></a></li>
-                    <li class="next"><a href=""><img src="icon/right.png" alt=""></a></li>
-                </ul> -->
-            </div>
+            
         </section>
     </section>
+    <footer class="contact" id="contact">
+        <div class="contact-content">
+            <h1><i class="far fa-user"></i> 聯絡資訊</h1>
+            <p>電子郵件 : zxceve266@gmail.com</p>
+            <p>電話 : 0912345678</p>
+            <h2 class="copyright">© Copyright 2020 徐智宏 Design by 徐智宏</h2>
+        </div>
+    </footer>
 
 </body>
 <script src="js/main.js"></script>
+<script src="js/effect.js"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
 </html>
