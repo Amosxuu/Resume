@@ -16,11 +16,12 @@
 
 .big {
   width: 100%;
-  font-size: 50px;
-  text-align: center;
-  margin: 20px 0;
+  font-size: 40px;
+  text-align: right;
+  margin: 10px 0;
   text-shadow: 2px 2px #333;
   color: #78ff00;
+  position: relative;
 }
 
 body {
@@ -85,7 +86,7 @@ header ul {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  margin-right: 20px;
+  padding-right: 20px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-flex: 2;
@@ -171,30 +172,86 @@ header ul li a:hover::before, header ul li a.active::before {
   border-radius: 50%;
   background: url("../img/person.jpg") no-repeat;
   background-size: cover;
+  animation: flash 1s ease-in-out alternate-reverse infinite;
 }
 
 .banner .self-info h1 {
   font-size: 50px;
   margin-top: 40px;
   text-shadow: 3px 3px #333;
+  font-style: italic;
 }
 
 .banner .self-info p {
   font-size: 40px;
   margin-top: 20px;
   text-shadow: 2px 2px #333;
+  font-style: italic;
+}
+
+.banner .self-info i {
+  margin-top: 50px;
+  font-size: 70px;
+  text-shadow: 3px 3px 10px  #333;
+  cursor: pointer;
+  animation: down 1s ease-in-out alternate-reverse infinite;
+}
+
+@-webkit-keyframes down {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+@keyframes down {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    -webkit-box-shadow: 0 0 20px 10px #fff;
+            box-shadow: 0 0 20px 10px #fff;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 50px 20px #fff200;
+            box-shadow: 0 0 50px 20px #fff200;
+  }
+}
+
+@keyframes flash {
+  0% {
+    -webkit-box-shadow: 0 0 20px 10px #fff;
+            box-shadow: 0 0 20px 10px #fff;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 50px 20px #fff200;
+            box-shadow: 0 0 50px 20px #fff200;
+  }
 }
 
 .container {
   position: relative;
-  padding: 50px 80px 0 80px;
+  padding: 20px 80px 0 80px;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .about {
   width: 100%;
   height: auto;
-  margin-top: -1px;
+  margin-bottom: 20px;
 }
 
 .about-content {
@@ -203,15 +260,13 @@ header ul li a:hover::before, header ul li a.active::before {
   margin-top: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid #333;
   position: relative;
   overflow: hidden;
 }
@@ -231,31 +286,61 @@ header ul li a:hover::before, header ul li a.active::before {
 
 .about-content .personal-info {
   max-width: 40%;
-  text-align: center;
+  height: inherit;
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-.about-content .personal-info img {
-  width: 300px;
-  height: 300px;
+.about-content .personal-info .person {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background: url("../img/person2.png") no-repeat;
+  background-size: cover;
+  background-position: center;
   margin-bottom: 20px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 0 0 0 5px  #fff;
+          box-shadow: 0 0 0 5px  #fff;
+}
+
+.about-content .personal-info .person:hover {
+  background-image: url("../img/person3.jpg");
+  background-size: cover;
+  background-position: top;
 }
 
 .about-content .personal-info p {
-  font-size: 18px;
+  font-size: 20px;
   margin: 10px;
 }
 
 .about-content .personal-content {
   max-width: 60%;
   position: relative;
+  padding: 20px 20px 20px 30px;
 }
 
 .about-content .personal-content p {
   font-size: 20px;
-  line-height: 35px;
+  line-height: 30px;
 }
 
 .about-content .personal-content p:nth-child(1) {
@@ -277,8 +362,8 @@ header ul li a:hover::before, header ul li a.active::before {
   line-height: 40px;
   margin-bottom: 10px;
   font-weight: 700;
-  -webkit-animation: typing 5s steps(10) infinite, caret 0.5s steps(1) infinite;
-          animation: typing 5s steps(10) infinite, caret 0.5s steps(1) infinite;
+  -webkit-animation: typing 4s steps(10) infinite, caret 0.5s steps(1) infinite;
+          animation: typing 4s steps(10) infinite, caret 0.5s steps(1) infinite;
 }
 
 @-webkit-keyframes typing {
@@ -549,6 +634,9 @@ header ul li a:hover::before, header ul li a.active::before {
 }
 
 @media (max-width: 992px) {
+  .big {
+    text-align: center;
+  }
   .container {
     padding: 30px 15px 0px 15px;
   }

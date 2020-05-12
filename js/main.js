@@ -7,15 +7,22 @@ function meunToggle(){
     navbar.classList.toggle('active')
 }
 menu.addEventListener('click',meunToggle)
-
+//----------------------------------------------------------------//
 
 let target = document.getElementById('about')
 let anchor = document.querySelector('header ul')
 let upBtn = document.querySelector('.up-btn')
-
+let downBtn = document.querySelector('.down-btn')
 
 upBtn.addEventListener('click',function(){
     window.scrollTo({'behavior': 'smooth', 'top': 0 })
+})
+
+downBtn.addEventListener('click',function(){
+    console.log(11)
+    let about = document.querySelector('#about')
+    let rect = about.getBoundingClientRect()
+    window.scrollBy({'behavior': 'smooth', 'top': rect.top - 80 })
 })
 
 anchor.addEventListener('click', function (e) {

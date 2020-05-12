@@ -16,12 +16,12 @@
 
 .big {
     width: 100%;
-    font-size: 50px;
-    text-align: center;
-    margin: 20px 0;
+    font-size: 40px;
+    text-align: right;
+    margin: 10px 0;
     text-shadow: 2px 2px #333;
-    color: #78ff00
-    ;
+    color: #78ff00;
+    position: relative;
 }
 
 
@@ -76,7 +76,7 @@ header {
         position: relative;
         display: flex;
         list-style: none;
-        margin-right: 20px;
+        padding-right: 20px;
         justify-content: space-around;
         flex: 2;
 
@@ -152,33 +152,62 @@ header {
             border-radius: 50%;
             background: url('../img/person.jpg') no-repeat;
             background-size: cover;
+            animation: flash 1s ease-in-out alternate-reverse infinite;
         }
 
         h1 {
             font-size: 50px;
             margin-top: 40px;
             text-shadow: 3px 3px #333;
-
+            font-style: italic;
         }
 
         p {
             font-size: 40px;
             margin-top: 20px;
             text-shadow: 2px 2px #333;
+            font-style: italic;
         }
+        i{
+            margin-top: 50px;
+            font-size: 70px;
+            text-shadow: 3px 3px 10px  #333;
+            cursor: pointer;
+            animation: down 1s ease-in-out alternate-reverse infinite;
+        }
+        
+    }
+}
+@keyframes down{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(50%);
+    }
+}
+
+@keyframes flash{
+    0%{
+        box-shadow: 0 0 20px 10px #fff;
+    }
+    100%{
+        box-shadow: 0 0 50px 20px #fff200;
     }
 }
 
 .container {
     position: relative;
-    padding: 50px 80px 0 80px;
+    padding: 20px 80px 0 80px;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .about {
     width: 100%;
     height: auto;
-    margin-top: -1px;
+    margin-bottom: 20px;
+    
 }
 
 .about-content {
@@ -186,11 +215,9 @@ header {
     height: auto;
     margin-top: 20px;
     box-sizing: border-box;
-    padding: 10px;
-    // background-color: red;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #333;
     position: relative;
     overflow: hidden;
 
@@ -209,31 +236,49 @@ header {
 
     .personal-info {
         max-width: 40%;
-        text-align: center;
+        height: inherit;
+        background-color: #333;
+        padding: 10px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex-grow: 1;   
 
-
-        img {
-            width: 300px;
-            height: 300px;
+        .person {
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
-            object-fit: cover;
+            background: url('../img/person2.png') no-repeat;
+            background-size: cover;
+            background-position: center;
             margin-bottom: 20px;
+            transition: all 0.5s ease;
+            box-shadow: 0 0 0 5px  #fff;
+            &:hover{
+                background-image: url('../img/person3.jpg');
+                background-size: cover;
+                background-position: top;
+                
+            }
             
         }
 
         p {
-            font-size: 18px;
+            font-size: 20px;
             margin: 10px;
         }
+       
     }
 
     .personal-content {
         max-width: 60%;
         position: relative;
-
+        padding: 20px 20px 20px 30px;
         p {
             font-size: 20px;
-            line-height: 35px;
+            line-height: 30px;
 
             &:nth-child(1){
                 font-size: 40px;
@@ -249,13 +294,11 @@ header {
                 width:21ch;
                 position: relative;
                 left: 20%;
-                // transform: translateX(-50%);
-                // text-align: center;
                 font-size: 40px;
                 line-height: 40px;
                 margin-bottom: 10px;
                 font-weight: 700;
-                animation:typing 5s steps(10) infinite,
+                animation:typing 4s steps(10) infinite,
                 caret 0.5s steps(1) infinite;
             }
         }
@@ -501,6 +544,9 @@ header {
 }
 
 @media (max-width: 992px) {
+    .big{
+        text-align: center;
+    }
     .container {
         padding: 30px 15px 0px 15px;
     }
