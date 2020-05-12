@@ -13,6 +13,7 @@ let target = document.getElementById('about')
 let anchor = document.querySelector('header ul')
 let upBtn = document.querySelector('.up-btn')
 let downBtn = document.querySelector('.down-btn')
+console.log(window.navigator.userAgent)
 
 upBtn.addEventListener('click',function(){
     window.scrollTo({'behavior': 'smooth', 'top': 0 })
