@@ -70,9 +70,9 @@ header .logo {
   text-decoration: none;
   font-size: 30px;
   margin-left: 10%;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 header .logo span {
@@ -85,11 +85,12 @@ header ul {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  margin-right: 20px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 header ul li {
@@ -100,7 +101,7 @@ header ul li a {
   position: relative;
   text-decoration: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   z-index: 2;
 }
 
@@ -186,7 +187,7 @@ header ul li a:hover::before, header ul li a.active::before {
 
 .container {
   position: relative;
-  padding: 50px 100px 0 100px;
+  padding: 50px 80px 0 80px;
   min-height: 100vh;
 }
 
@@ -206,9 +207,8 @@ header ul li a:hover::before, header ul li a.active::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -255,7 +255,7 @@ header ul li a:hover::before, header ul li a.active::before {
 
 .about-content .personal-content p {
   font-size: 20px;
-  line-height: 40px;
+  line-height: 35px;
 }
 
 .about-content .personal-content p:nth-child(1) {
@@ -340,9 +340,9 @@ header ul li a:hover::before, header ul li a.active::before {
 }
 
 .skill-content .skill-card {
-  width: 30%;
+  width: 28%;
   text-align: center;
-  border: 1px solid #333;
+  border: 2px solid #333;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -439,13 +439,13 @@ header ul li a:hover::before, header ul li a.active::before {
   content: 'Game';
 }
 
-.works-content .banner-text {
+.works-content .works-text {
   position: relative;
   max-width: 500px;
   margin-right: 50px;
 }
 
-.works-content .banner-text h2 {
+.works-content .works-text h2 {
   font-size: 54px;
   font-weight: 900;
   text-transform: uppercase;
@@ -453,26 +453,27 @@ header ul li a:hover::before, header ul li a.active::before {
   color: #333;
 }
 
-.works-content .banner-text p {
+.works-content .works-text p {
   font-size: 18px;
   line-height: 1.8em;
   color: #333;
   margin: 20px 0;
 }
 
-.works-content .banner-text a {
+.works-content .works-text a {
   position: relative;
   display: inline-block;
   font-size: 20px;
   text-decoration: none;
   font-weight: 900;
-  padding: 15px;
+  padding: 10px;
   letter-spacing: 2px;
   cursor: pointer;
+  margin-top: 10px;
   color: #333;
 }
 
-.works-content .banner-text a::before {
+.works-content .works-text a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -485,7 +486,7 @@ header ul li a:hover::before, header ul li a.active::before {
   z-index: -1;
 }
 
-.works-content .banner-text a:hover::before {
+.works-content .works-text a:hover::before {
   width: 100%;
 }
 
@@ -713,7 +714,7 @@ header ul li a:hover::before, header ul li a.active::before {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    border: 1px solid #333;
+    border: 2px solid #333;
     padding: 40px;
   }
   .works-content::after {
@@ -723,11 +724,11 @@ header ul li a:hover::before, header ul li a.active::before {
             transform: translateX(-100%);
     font-size: 15vw;
   }
-  .works-content .banner-text {
+  .works-content .works-text {
     max-width: 100%;
     margin-right: 0;
   }
-  .works-content .banner-text h2 {
+  .works-content .works-text h2 {
     font-size: 35px;
   }
   .works-content .works-img {
