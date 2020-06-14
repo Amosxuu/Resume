@@ -1,3 +1,27 @@
+if (!window.scrollTo) {
+    window.scrollTo = function (x, y) {
+        window.pageXOffset = x;
+        window.pageYOffset = y;
+    };
+}
+if (!window.scrollBy) {
+    window.scrollBy = function (x, y) {
+        window.pageXOffset += x;
+        window.pageYOffset += y;
+    };
+}
+if (!document.body.scrollTo) {
+    Element.prototype.scrollTo = function (x, y) {
+        this.scrollLeft = x;
+        this.scrollTop = y;
+    };
+}
+if (!document.body.scrollBy) {
+    Element.prototype.scrollBy = function (x, y) {
+        this.scrollLeft += x;
+        this.scrollTop += y;
+    };
+}
 
 let menu = document.querySelector('.menu-icon');
 let index = 0;
@@ -44,6 +68,7 @@ anchor.addEventListener('click', function (e) {
     
 
 })
+
 
 
 // window.addEventListener('scroll',()=>{

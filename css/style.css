@@ -350,8 +350,9 @@ header ul li a:hover::before, header ul li a.active::before {
 }
 
 .about-content .personal-content p {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 1.8;
+  text-indent: 4ch;
 }
 
 .about-content .personal-content p:nth-child(1) {
